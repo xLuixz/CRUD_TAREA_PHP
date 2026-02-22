@@ -10,5 +10,4 @@
     if($query){
         header("Location: index.php");
     };
-
 ?>
