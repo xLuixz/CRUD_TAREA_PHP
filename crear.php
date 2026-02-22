@@ -1,16 +1,16 @@
 <?php
-include('conexion.php');
-$con = conexion();
+    include('conexion.php');
+    $con = conexion();
 
-$id = null;
-$usuario = $_POST['user'];
-$clave = $_POST['pass'];
+    $usuario = $_POST['user'];
+    $correo = $_POST['email'];
+    $telefono = $_POST['telefono'];
+    $pais = $_POST['pais'];
 
-$sql = "INSERT INTO usuarios VALUES('$id','$usuario','$clave')";
-$query = mysqli_query($con,$sql);
+    $sql = "INSERT INTO usuarios VALUES('$id','$usuario','$correo','$telefono','$pais')";
+    $query = mysqli_query($con,$sql);
 
-if($query){
-    header("Location: index.php");
-};
-
+    if($query){
+        header("Location: index.php");
+    };
 ?>
